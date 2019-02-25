@@ -1,2 +1,2 @@
-# algorithm-notes
+# algorithms
 Algorithm learning 

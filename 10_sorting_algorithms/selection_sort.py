@@ -5,17 +5,24 @@
 
 
 def selection_sort(obj_list):
+    opt_list = obj_list
+    index_list = []
+    for _ in obj_list:
+        min_value = min(opt_list)
+        min_index = obj_list.index(min_value)
+        index_list.append(min_index)
+        opt_list = opt_list.remove(min_value)
 
-    for i in range(len(obj_list)):
-        min_ord = i
-        for v in range(len(obj_list[i:])):
-            if obj_list[min_ord] > obj_list[v]:
-                min_ord = v + i
-                print(min_ord)
-        obj_list[i],obj_list[min_ord] = obj_list[min_ord],obj_list[i]
 
+        # min_ord = i
+        # for v in range(len(obj_list[i:])):
+        #     if obj_list[min_ord] > obj_list[v]:
+        #         min_ord = v + i
+        #         print(min_ord)
+        # obj_list[i],obj_list[min_ord] = obj_list[min_ord],obj_list[i]
+        #
 
-    return obj_list
+    return [obj_list[i] for i in index_list]
 
 
 if __name__ == "__main__":
